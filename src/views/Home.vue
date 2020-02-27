@@ -1,6 +1,29 @@
 <template>
   <div class="home">
-    <div class="modules">
+    <!-- 个人用户 -->
+    <div class="modules" v-if='userType==0?true:false'>
+      <home-modules
+        v-for="(item,index) in modulesList"
+        :key="index"
+        :num="item.num"
+        :icon="item.icon"
+        :desc="item.desc"
+        :navigate="item.navigate"
+      ></home-modules>
+    </div>
+    <!-- 门卫用户 -->
+    <div class="modules" v-if='userType==1?true:false'>
+      <home-modules
+        v-for="(item,index) in modulesList"
+        :key="index"
+        :num="item.num"
+        :icon="item.icon"
+        :desc="item.desc"
+        :navigate="item.navigate"
+      ></home-modules>
+    </div>
+    <!-- 主管用户 -->
+    <div class="modules" v-if='userType==2?true:false'>
       <home-modules
         v-for="(item,index) in modulesList"
         :key="index"
@@ -15,6 +38,7 @@
 
 <script>
 import HomeModules from "../components/HomeModules";
+import home_modulesList from '../assets/js/home_modulesList'
 export default {
   name: "Home",
   components: {
@@ -22,35 +46,17 @@ export default {
   },
   data(){
     return{
-      modulesList:[
-        {
-          num: 1,
-          icon: [require('../assets/img/passage.png')],
-          desc: ['访客通行'],
-          navigate:['1']
-        },
-        {
-          num: 1,
-          icon: [require('../assets/img/passage.png')],
-          desc: ['出入记录'],
-          navigate:['2']
-        },
-        {
-          num: 2,
-          icon: [require('../assets/img/passage.png'),require('../assets/img/passage.png')],
-          desc: ['到访预约','通行证'],
-          navigate:['3','4']
-        },
-        {
-          num: 2,
-          icon: [require('../assets/img/passage.png'),require('../assets/img/passage.png')],
-          desc: ['个人信息','消息通知'],
-          navigate:['5','6']
-        }
-      ]
+      modulesList: [],//功能列表
+      userType: ''//用户类型  0个人  1门卫  2主管
     }
   },
-  created() {}
+  created() {
+    //取跳转链接参数 判断用户身份
+    this.userType = 1
+
+    //
+    this.modulesList = home_modulesList.personalList.modulesList
+  }
 };
 </script>
 

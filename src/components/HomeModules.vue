@@ -66,7 +66,7 @@ export default {
 }
 .icon {
   width: 0.51rem;
-  height: 0.51rem;
+  // height: 0.51rem;
 }
 #module1 {
   width: 100%;
