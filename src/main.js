@@ -6,11 +6,11 @@ import './assets/style/reset.css'
 import './assets/style/border.css'
 import './assets/js/rem'
 import fastClick from 'fastclick'
-import { Field,Cell, CellGroup,Switch } from 'vant';
+import { Field,Cell, CellGroup,Switch,NoticeBar,Overlay } from 'vant';
 import 'vant/lib/index.css';
 
 Vue.config.productionTip = false
-Vue.use(Field).use(Cell).use(CellGroup).use(Switch);
+Vue.use(Field).use(Cell).use(CellGroup).use(Switch).use(NoticeBar).use(Overlay);
 fastClick.attach(document.body)
 new Vue({
   router,

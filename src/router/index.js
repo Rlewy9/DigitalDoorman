@@ -4,10 +4,9 @@ import Home from '../views/Home.vue'
 import userInfoReg from '../views/userInfoReg'
 import accessRecords from '../views/accessRecords'
 Vue.use(VueRouter)
-
 const routes = [
   {
-    path: '/',
+    path: '/Home',
     name: 'Home',
     component: Home
   },
@@ -20,7 +19,7 @@ const routes = [
     path: '/accessRecords',
     name: 'accessRecords',
     component: accessRecords
-  },
+  }
 ]
 
 const router = new VueRouter({

@@ -49,6 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 .userInfoReg {
+  background: #fff;
   width: 3.75rem;
   .infoCon {
     width: 3.27rem;
