@@ -16,24 +16,11 @@
       </div>
       <div class="infoItem">
         <div class="key" style="margin-bottom: 0;">* 住宅信息</div>
-        <!-- <input type="text" placeholder="请填写您的真实住址" /> -->
-        <van-field
-          v-model="value"
-          placeholder="请填写您的真实住址"
-        />
+        <input type="text" placeholder="请填写您的真实住址" />
+        <!-- <van-field v-model="value" placeholder="请填写您的真实住址" /> -->
       </div>
       <button class="btn">提交保存</button>
-      
     </div>
-    <van-cell-group>
-        <van-field
-          v-model="value"
-          required
-          label="手机号"
-          placeholder="请输入手机号"
-          error-message="1"
-        />
-      </van-cell-group>
   </div>
 </template>
 
