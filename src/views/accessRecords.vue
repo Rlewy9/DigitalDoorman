@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <SlidingChoice :option1="option1" :option2="option2" @type="chooseType"></SlidingChoice>
-    <Record v-for="(item,index) in recordList" :key="index" :infoList="item.infoList"></Record>
+    <Record v-for="(item,index) in recordList" :key="index" :recordType=0 :infoList="item.infoList"></Record>
   </div>
 </template>
 

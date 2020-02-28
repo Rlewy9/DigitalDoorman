@@ -3,19 +3,19 @@ let List = [
       num: 1,
       icon: [require('../img/home/home_personal_1.png')],
       desc: ['访客通行'],
-      navigate: ['1']
+      navigate: ['/passphrase']
     },
     {
       num: 1,
       icon: [require('../img/home/home_personal_2.png')],
       desc: ['出入记录'],
-      navigate: ['2']
+      navigate: ['/accessRecords']
     },
     {
       num: 2,
       icon: [require('../img/home/home_personal_3.png'), require('../img/home/home_personal_4.png')],
       desc: ['到访预约', '通行证'],
-      navigate: ['3', '4']
+      navigate: ['3', '/passRecords']
     },
     {
       num: 2,

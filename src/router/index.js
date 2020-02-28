@@ -3,10 +3,12 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import userInfoReg from '../views/userInfoReg'
 import accessRecords from '../views/accessRecords'
+import passphrase from '../views/passphrase'
+import passRecords from '../views/passRecords'
 Vue.use(VueRouter)
 const routes = [
   {
-    path: '/Home',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -19,6 +21,16 @@ const routes = [
     path: '/accessRecords',
     name: 'accessRecords',
     component: accessRecords
+  },
+  {
+    path: '/passphrase',
+    name: 'passphrase',
+    component: passphrase
+  },
+  {
+    path: '/passRecords',
+    name: 'passRecords',
+    component: passRecords
   }
 ]
 

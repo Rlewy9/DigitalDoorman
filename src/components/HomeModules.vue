@@ -46,7 +46,7 @@ export default {
   created() {},
   methods: {
     todo(src) {
-      console.log(src);
+      this.$router.push({path:src,query:{a:1}})
     }
   }
 };

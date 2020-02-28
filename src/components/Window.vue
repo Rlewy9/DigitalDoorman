@@ -55,9 +55,7 @@ export default {
     };
   },
   created() {
-    console.log(this.$route.name == "Home");
-
-    console.log(this.back);
+    
   },
   methods: {
     showChangeOp() {
@@ -66,7 +64,7 @@ export default {
     },
     chooseUserType(userType) {
       this.optionShow = false;
-      this.$router.push({ path: "/home", query: { userType } });
+      this.$router.push({ path: "/", query: { userType } });
     },
     goBack() {
       this.$router.go(-1);
