@@ -63,7 +63,9 @@ export default {
     if (this.$route.query.userType) {
       this.userType = this.$route.query.userType;
     }
+    
     //取跳转链接参数 判断用户身份
+    window.localStorage.setItem('userType',this.userType)
     this.modulesList = home_modulesList.List[this.userType];
     this.bg.backgroundImage =
       "url(" + require("../assets/img/home/bg" + this.userType + ".png") + ")";

@@ -21,7 +21,7 @@ let List = [
       num: 2,
       icon: [require('../img/home/home_personal_5.png'), require('../img/home/home_personal_6.png')],
       desc: ['个人信息', '消息通知'],
-      navigate: ['5', '6']
+      navigate: ['/userInfo', '/messageList']
     }
   ],
   [{

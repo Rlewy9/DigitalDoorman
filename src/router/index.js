@@ -5,6 +5,8 @@ import userInfoReg from '../views/userInfoReg'
 import accessRecords from '../views/accessRecords'
 import passphrase from '../views/passphrase'
 import passRecords from '../views/passRecords'
+import userInfo from '../views/userInfo'
+import messageList from '../views/messageList'
 Vue.use(VueRouter)
 const routes = [
   {
@@ -31,6 +33,16 @@ const routes = [
     path: '/passRecords',
     name: 'passRecords',
     component: passRecords
+  },
+  {
+    path: '/userInfo',
+    name: 'userInfo',
+    component: userInfo
+  },
+  {
+    path: '/messageList',
+    name: 'messageList',
+    component: messageList
   }
 ]
 

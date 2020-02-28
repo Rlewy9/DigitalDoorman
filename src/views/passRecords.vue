@@ -17,8 +17,8 @@ export default {
       info:{
           name: '刘正宵',
           tel: '18516974698',
-          name1: '谭明月',
-          tel1: '15212312321',
+          name1: 'yy',
+          tel1: '1512312321',
           address: '奥术大师大',
           validity: '2020年2月2日'
       }

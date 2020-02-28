@@ -10,6 +10,16 @@
         <p>请主动出示，配合检查</p>
       </div>
     </div>
+
+    <div class="QRCon_userInfo" v-if="type=='userInfo'?true:false">
+      <FormH1 style="margin-left:.18rem;" :title="title1" :desc="desc1"></FormH1>
+      <div class="QR">
+        <img :src="QRSrc" alt="二维码" />
+      </div>
+      <div class="desc">
+        <p>凭此码可邀请访客</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -32,8 +42,10 @@ export default {
   },
   data() {
     return {
-      title: "通行证",
-      desc: `更新于: ${formatDate(new Date(), "yyyy-MM-dd hh:mm")}`
+      title: "通行证",  //mock1
+      desc: `更新于: ${formatDate(new Date(), "yyyy-MM-dd hh:mm")}`, //mock1
+      title1: '单位码', //mock2
+      desc1: `所属单位a小区`
     };
   }
 };
